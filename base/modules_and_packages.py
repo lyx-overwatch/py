@@ -27,3 +27,8 @@ print(f"Current date and time: {datetime.now()}")
 # 使用自定义模块
 # from my_module import subtract
 # print(subtract(10, 3))
+
+import basic_syntax
+
+my_person = basic_syntax.person
+print(my_person.introduce())

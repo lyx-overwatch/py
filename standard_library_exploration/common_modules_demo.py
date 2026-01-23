@@ -36,9 +36,15 @@ for word in words:
 print("--- 普通字典分组 ---")
 print(grouped_words)
 
+try:
+    print(f"访问一个不存在的 key 'z': {grouped_words['z']}") # 会报错
+except KeyError as e:
+    print(f"访问不存在的 key 报错: {e}")
+
 # 使用 defaultdict，代码更简洁
 # 我们告诉 defaultdict，如果一个 key 不存在，就用 list() 创建一个空列表作为默认值
 grouped_words_default = defaultdict(list)
+print(grouped_words_default)
 for word in words:
     grouped_words_default[word[0]].append(word)
 print("\n--- collections.defaultdict 分组 ---")
