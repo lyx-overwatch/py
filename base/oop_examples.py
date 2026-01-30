@@ -7,6 +7,13 @@ class Animal:
 
     def speak(self):
         print(f"{self.name} makes a sound")
+    
+    def eat(self):
+        print(f"{self.name} is eating")
+    
+    @staticmethod
+    def info():
+        print("Animals are living beings.")
 
 # 继承
 class Dog(Animal):
